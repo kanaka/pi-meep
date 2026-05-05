@@ -1,0 +1,31 @@
+{
+  "name": "@adidoes/pi-meep",
+  "version": "0.1.0",
+  "description": "Play a short notification sound when pi finishes responding.",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "notification",
+    "sound",
+    "audio"
+  ],
+  "license": "MIT",
+  "files": [
+    "index.ts",
+    "assets/meep.png",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@mariozechner/pi-coding-agent": "*"
+  },
+  "scripts": {
+    "check": "node --input-type=module -e \"import('./index.ts').then(() => console.log('ok'))\""
+  }
+}
